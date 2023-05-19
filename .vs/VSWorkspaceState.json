@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\QuickQuestionBank",
+    "\\QuickQuestionBank\\QuickQuestionBank.Application",
+    "\\QuickQuestionBank\\QuickQuestionBank.Application\\Features",
+    "\\QuickQuestionBank\\QuickQuestionBank.Application\\Features\\QuestionType",
+    "\\QuickQuestionBank\\QuickQuestionBank.Application\\Features\\QuestionType\\Handlers"
+  ],
+  "SelectedNode": "\\QuickQuestionBank\\QuickQuestionBank.Application\\Features\\QuestionType\\Handlers\\GetAllQuestionTypeQueryRequestHandler.cs",
+  "PreviewInSolutionExplorer": false
+}

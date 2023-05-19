@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\bin\Debug\net6.0\QuickQuestionBank.Entities.deps.json
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\bin\Debug\net6.0\QuickQuestionBank.Entities.dll
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\bin\Debug\net6.0\QuickQuestionBank.Entities.pdb
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.AssemblyInfo.cs
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.dll
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\refint\QuickQuestionBank.Entities.dll
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.pdb
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\ref\QuickQuestionBank.Entities.dll
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\bin\Debug\net6.0\QuickQuestionBank.Entities.runtimeconfig.json
+C:\Users\User\source\repos\QuickQuestionBank\QuickQuestionBank.Entities\obj\Debug\net6.0\QuickQuestionBank.Entities.genruntimeconfig.cache
