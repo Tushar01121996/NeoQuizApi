@@ -36,9 +36,9 @@ namespace QuickQuestionBank.API.Controllers
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> Post(QuestionTypeDTO model)
+        public async Task<ActionResult> Post(QuizQuestionDTO model)
         {
-            var response = await _mediator.Send(new CreateQuestionTypeCommand { model = model });
+            var response = await _mediator.Send(new CreateQuizQuestionCommand { model = model });
             return Ok(response);
         }
 
