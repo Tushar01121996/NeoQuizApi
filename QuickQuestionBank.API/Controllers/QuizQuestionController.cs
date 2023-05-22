@@ -1,10 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using QuickQuestionBank.Application.Features.QuestionType.Commands;
 using QuickQuestionBank.Application.Features.QuizQuestion.Commands;
 using QuickQuestionBank.Application.Features.QuizQuestion.Queries;
-//using QuickQuestionBank.Application.Features.QuizQuestion.Queries;
 using QuickQuestionBank.Domain.DTOs;
 
 namespace QuickQuestionBank.API.Controllers

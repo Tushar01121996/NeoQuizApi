@@ -143,10 +143,15 @@ namespace QuickQuestionBank.Domain.Migrations
                     b.Property<string>("OptionText")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("SortOrder")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
 
                     b.ToTable("QuestionAnswerMapping");
                 });
@@ -437,6 +442,17 @@ namespace QuickQuestionBank.Domain.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuestionAnswerMapping", b =>
+                {
+                    b.HasOne("QuickQuestionBank.Domain.Entities.QuizQuestion", "QuizQuestion")
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("QuizQuestion");
                 });
 
             modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuestionType", b =>

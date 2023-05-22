@@ -48,6 +48,7 @@ builder.Services.AddIdentity<User, Role>()
 builder.Services.AddTransient<IQuizRepository, QuizRepository>();
 builder.Services.AddTransient<IQuizQuestionRepository, QuizQuestionRepository>();
 builder.Services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>();
+builder.Services.AddTransient<IQuestionAnswerMappingRepository, QuestionAnswerMappingRepository>();
 
 #endregion
 builder.Services.AddApplicationServices();

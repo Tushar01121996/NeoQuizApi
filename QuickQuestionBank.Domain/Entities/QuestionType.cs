@@ -9,6 +9,6 @@ namespace QuickQuestionBank.Domain.Entities {
 
         //[ForeignKey(nameof(UserId))]
         //public User User { get; set; }
-      
+
     }
 }
