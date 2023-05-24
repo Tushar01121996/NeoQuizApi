@@ -28,7 +28,6 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         {
             return await _context.QuizQuestions.AsNoTracking().ToListAsync();
         }
-
         public async Task<QuizQuestion> GetByIdAsync(Guid id)
         {
             return await _context.QuizQuestions.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);

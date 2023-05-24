@@ -46,5 +46,9 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
             await _context.SaveChangesAsync();
             return entity;
         }
+        public async Task<IReadOnlyList<QuestionAnswerMapping>> GetAllByQuestionIdAsync(Guid id)
+        {
+            return await _context.QuestionAnswerMapping.AsNoTracking().Where(x => x.QuestionId == id).ToListAsync();
+        }
     }
 }
