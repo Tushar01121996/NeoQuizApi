@@ -29,6 +29,11 @@ namespace QuickQuestionBank.API.Controllers
         public async Task<IActionResult> GetAll() =>
             Ok(await _mediator.Send(new GetAllQuestionAnswerMappingQuery()));
 
+        [HttpGet]
+        [Route("get-all-by-QuestionId")]
+        public async Task<IActionResult> GetAllByQuestionId(Guid id) =>
+           Ok(await _mediator.Send(new GetQuestionAnswerByQuestionIdQuery { Id = id }));
+
         [HttpPost]
         [Route("save")]
         [ProducesResponseType(201)]

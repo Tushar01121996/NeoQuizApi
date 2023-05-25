@@ -9,6 +9,6 @@ namespace QuickQuestionBank.Domain.Entities {
         //public virtual QuizQuestion QuizQuestion { get; set; }
         public string OptionText { get; set; }
         public string IsCorrectAnswer { get; set; }
-        public string SortOrder { get; set; }
+        public int SortOrder { get; set; }
     }
 }

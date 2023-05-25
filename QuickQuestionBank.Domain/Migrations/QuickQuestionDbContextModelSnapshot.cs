@@ -146,12 +146,10 @@ namespace QuickQuestionBank.Domain.Migrations
                     b.Property<Guid>("QuestionId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("SortOrder")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
 
                     b.ToTable("QuestionAnswerMapping");
                 });
@@ -183,12 +181,7 @@ namespace QuickQuestionBank.Domain.Migrations
                     b.Property<string>("QuestionTypeName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("QuestionTypes");
                 });
@@ -284,6 +277,41 @@ namespace QuickQuestionBank.Domain.Migrations
                     b.HasIndex("QuestionTypeId");
 
                     b.ToTable("QuizQuestions");
+                });
+
+            modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuizQuestionMapping", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("QuizId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QuizQuestionMapping");
                 });
 
             modelBuilder.Entity("QuickQuestionBank.Domain.Entities.Role", b =>
@@ -442,26 +470,6 @@ namespace QuickQuestionBank.Domain.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuestionAnswerMapping", b =>
-                {
-                    b.HasOne("QuickQuestionBank.Domain.Entities.QuizQuestion", "QuizQuestion")
-                        .WithMany()
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("QuizQuestion");
-                });
-
-            modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuestionType", b =>
-                {
-                    b.HasOne("QuickQuestionBank.Domain.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("QuickQuestionBank.Domain.Entities.QuizQuestion", b =>
