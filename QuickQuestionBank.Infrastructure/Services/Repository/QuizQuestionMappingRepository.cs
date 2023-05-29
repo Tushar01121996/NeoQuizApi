@@ -16,7 +16,7 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         }
         public async Task<Guid> DeleteAsync(Guid id)
         {
-            IReadOnlyList<QuizQuestionMapping> quiz = await _context.QuizQuestionMapping.Where(x => x.QuizId == id).ToListAsync();
+            IReadOnlyList<QuizQuestionMapping> quiz = await _context.QuizQuestionMapping.AsNoTracking().Where(x => x.QuizId == id).ToListAsync();
             if(quiz == null) {
                 return default;
             }
@@ -39,7 +39,8 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         }
         public async Task<IReadOnlyList<QuizQuestionMapping>> GetByQuizIdAsync(Guid id)
         {
-            return await _context.QuizQuestionMapping.AsNoTracking().Where(x => x.QuizId == id).ToListAsync();
+            var data = await _context.QuizQuestionMapping.Where(x => x.QuizId == id).ToListAsync();
+            return data;
         }
     }
 }

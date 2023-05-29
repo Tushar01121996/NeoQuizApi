@@ -6,8 +6,8 @@ namespace QuickQuestionBank.Domain.DTOs
     public class QuizQuestionMappingDTO
     {
         public Guid? Id { get; set; }
-        public virtual Guid QuizId { get; set; }
-        public virtual Guid QuestionId { get; set; }
+        public Guid QuizId { get; set; }
+        public Guid QuestionId { get; set; }
 
         #region Mappers
         public static void MapDtoToEntity(QuizQuestionMappingDTO source, QuizQuestionMapping destination)

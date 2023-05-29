@@ -9,6 +9,6 @@ namespace QuickQuestionBank.Domain.Entities
         public decimal QuizMarks { get; set; }
         public string QuestionsPerPage { get; set; }
         public string PassingCriteriaInPercentage { get; set; }
-        public TimeSpan timeDuration { get; set; }
+        public string timeDuration { get; set; }
     }
 }

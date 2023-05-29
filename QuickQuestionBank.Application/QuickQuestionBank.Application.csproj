@@ -23,9 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\User\Commands\" />
-    <Folder Include="Features\User\Handlers\" />
-    <Folder Include="Features\User\Queries\" />
+    <Folder Include="Features\Login\Queries\" />
   </ItemGroup>
 
 </Project>

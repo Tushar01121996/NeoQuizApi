@@ -372,3 +372,5 @@ D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\refint\QuickQuestion
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\QuickQuestionBank.API.pdb
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\QuickQuestionBank.API.genruntimeconfig.cache
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\ref\QuickQuestionBank.API.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
