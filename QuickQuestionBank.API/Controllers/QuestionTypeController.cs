@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using QuickQuestionBank.Application.Features.QuestionType.Commands;
@@ -10,6 +11,8 @@ namespace QuickQuestionBank.API.Controllers
     [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize]
     public class QuestionTypeController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -25,6 +28,7 @@ namespace QuickQuestionBank.API.Controllers
             Ok(await _mediator.Send(new GetQuestionTypeQuery { Id = id }));
 
         [HttpGet]
+        
         [Route("get-all")]
         public async Task<IActionResult> GetAll() =>
             Ok(await _mediator.Send(new GetAllQuestionTypeQuery()));

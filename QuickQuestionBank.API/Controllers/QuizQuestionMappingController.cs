@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using QuickQuestionBank.Application.Features.QuestionAnswerMapping.Queries;
@@ -11,6 +12,7 @@ namespace QuickQuestionBank.API.Controllers
     [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class QuizQuestionMappingController : ControllerBase
     {
         private readonly IMediator _mediator;
