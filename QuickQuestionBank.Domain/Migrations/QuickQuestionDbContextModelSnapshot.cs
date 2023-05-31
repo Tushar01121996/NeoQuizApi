@@ -225,8 +225,8 @@ namespace QuickQuestionBank.Domain.Migrations
                     b.Property<string>("QuizTitle")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("timeDuration")
-                        .HasColumnType("time");
+                    b.Property<string>("timeDuration")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -342,6 +342,34 @@ namespace QuickQuestionBank.Domain.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("QuickQuestionBank.Domain.Entities.ShareQuiz", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("QuizId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShareQuizes");
                 });
 
             modelBuilder.Entity("QuickQuestionBank.Domain.Entities.User", b =>

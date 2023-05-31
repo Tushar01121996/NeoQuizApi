@@ -36,6 +36,7 @@ builder.Services.AddCors(options =>
                                 .AllowAnyMethod();
         });
 });
+builder.Services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
 #region Database config
 builder.Services.AddDbContext<QuickQuestionDbContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
@@ -55,6 +56,8 @@ builder.Services.AddTransient<IQuizQuestionRepository, QuizQuestionRepository>()
 builder.Services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>();
 builder.Services.AddTransient<IQuestionAnswerMappingRepository, QuestionAnswerMappingRepository>();
 builder.Services.AddTransient<IQuizQuestionMappingRepository, QuizQuestionMappingRepository>();
+builder.Services.AddTransient<IShareQuizRepository, ShareQuizRepository>();
+builder.Services.AddTransient<IMailService, MailService>();
 #endregion
 
 var key = Encoding.ASCII.GetBytes("8772ED32-E6A0-47A3-86E3-34C7D789F5C0"); // Replace with your actual secret key

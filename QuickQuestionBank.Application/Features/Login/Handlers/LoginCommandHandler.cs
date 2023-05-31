@@ -45,7 +45,7 @@ namespace QuickQuestionBank.Application.Features.Login.Handlers
                 {
                 new Claim(ClaimTypes.Name, username)
             }),
-                Expires = DateTime.UtcNow.AddHours(1), // Token expires in 1 hour
+                Expires = DateTime.UtcNow.AddMinutes(60), // Token expires in 1 hour
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
