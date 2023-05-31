@@ -22,7 +22,7 @@ namespace QuickQuestionBank.API.Controllers
         public async Task<IActionResult> Login(LoginCommand command)
         {
             var token = await _mediator.Send(command);
-            return Ok(new { Token = token });
+            return Ok(new { Token = token, formData = command });
         }
     }
 }

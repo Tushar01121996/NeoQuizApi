@@ -374,3 +374,8 @@ D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\QuickQuestionBank.AP
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\obj\Debug\net6.0\ref\QuickQuestionBank.API.dll
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\MailKit.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\MimeKit.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Tushar\NeoQuizApi\QuickQuestionBank.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
