@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickQuestionBank.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,7 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
 {
     public interface IAuthRepository
     {
-        void Login();
-        void Register();
+        bool LoginAsync(LoginUser login);
 
     }
 }
