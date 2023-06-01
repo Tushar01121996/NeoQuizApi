@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.IdentityModel.Tokens;
 using QuickQuestionBank.Application.Features.Login.Commands;
+using QuickQuestionBank.Application.Helpers;
+using QuickQuestionBank.Application.Interfaces.IRepository;
+using QuickQuestionBank.Domain.Entities;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,10 +15,15 @@ namespace QuickQuestionBank.Application.Features.Login.Handlers
 {
     public class LoginCommandHandler : IRequestHandler<LoginCommand, string>
     {
+        private readonly IAuthRepository _repository;
+        public LoginCommandHandler(IAuthRepository repository) 
+        {
+            _repository = repository;
+        }
         public Task<string> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
             // Authenticate the user based on the provided credentials
-            bool isAuthenticated = AuthenticateUser(request.Username, request.Password);
+            bool isAuthenticated =  AuthenticateUser(request);
 
             if (isAuthenticated)
             {
@@ -27,11 +35,12 @@ namespace QuickQuestionBank.Application.Features.Login.Handlers
             throw new UnauthorizedAccessException("Invalid credentials");
         }
 
-        private bool AuthenticateUser(string username, string password)
+        private bool AuthenticateUser(LoginCommand login)
         {
-            // Implement your authentication logic here
-            // Example: check the username and password against a database
-            return (username == "admin" && password == "password");
+            LoginUser _user = new LoginUser();
+            _user.Username = login.Username;
+            _user.Password = login.Password;
+            return _repository.LoginAsync(_user);
         }
 
         private string GenerateJwtToken(string username)

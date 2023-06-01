@@ -57,6 +57,7 @@ builder.Services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>()
 builder.Services.AddTransient<IQuestionAnswerMappingRepository, QuestionAnswerMappingRepository>();
 builder.Services.AddTransient<IQuizQuestionMappingRepository, QuizQuestionMappingRepository>();
 builder.Services.AddTransient<IShareQuizRepository, ShareQuizRepository>();
+builder.Services.AddTransient<IAuthRepository, AuthRepository>();
 builder.Services.AddTransient<IMailService, MailService>();
 #endregion
 
