@@ -3507,24 +3507,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\soft\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\91943\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
       "projectName": "QuickQuestionBank.API",
       "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
       "packagesPath": "C:\\Users\\soft\\.nuget\\packages\\",
       "outputPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\obj\\",
+=======
+      "projectUniqueName": "D:\\QuizApp\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+      "projectName": "QuickQuestionBank.API",
+      "projectPath": "D:\\QuizApp\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+      "packagesPath": "C:\\Users\\91943\\.nuget\\packages\\",
+      "outputPath": "D:\\QuizApp\\QuickQuestionBank.API\\obj\\",
+>>>>>>> origin/TopicsAndSubTopics
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\soft\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\91943\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3532,13 +3535,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
               "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
             },
@@ -3547,6 +3551,16 @@
             },
             "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj": {
               "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj"
+=======
+            "D:\\QuizApp\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
+              "projectPath": "D:\\QuizApp\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
+            },
+            "D:\\QuizApp\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj": {
+              "projectPath": "D:\\QuizApp\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj"
+            },
+            "D:\\QuizApp\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj": {
+              "projectPath": "D:\\QuizApp\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj"
+>>>>>>> origin/TopicsAndSubTopics
             }
           }
         }
@@ -3627,7 +3641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

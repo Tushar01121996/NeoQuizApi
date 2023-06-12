@@ -54,3 +54,17 @@ D:\Tushar\NeoQuizApi\QuickQuestionBank.Domain\obj\Debug\net6.0\refint\QuickQuest
 D:\Tushar\NeoQuizApi\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.pdb
 D:\Tushar\NeoQuizApi\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.genruntimeconfig.cache
 D:\Tushar\NeoQuizApi\QuickQuestionBank.Domain\obj\Debug\net6.0\ref\QuickQuestionBank.Domain.dll
+D:\QuizApp\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.deps.json
+D:\QuizApp\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.runtimeconfig.json
+D:\QuizApp\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.dll
+D:\QuizApp\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.pdb
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.csproj.AssemblyReference.cache
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.AssemblyInfoInputs.cache
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.AssemblyInfo.cs
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.csproj.CoreCompileInputs.cache
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.dll
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\refint\QuickQuestionBank.Domain.dll
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.pdb
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.genruntimeconfig.cache
+D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\ref\QuickQuestionBank.Domain.dll
