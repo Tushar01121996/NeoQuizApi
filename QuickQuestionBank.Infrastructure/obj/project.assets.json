@@ -2562,11 +2562,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj",
+      "projectName": "QuickQuestionBank.Infrastructure",
+      "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\soft\\.nuget\\packages\\",
+      "outputPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\obj\\",
+=======
       "projectUniqueName": "D:\\QuizApp\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj",
       "projectName": "QuickQuestionBank.Infrastructure",
       "projectPath": "D:\\QuizApp\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\91943\\.nuget\\packages\\",
       "outputPath": "D:\\QuizApp\\QuickQuestionBank.Infrastructure\\obj\\",
+>>>>>>> origin/TopicsAndSubTopics
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\91943\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2583,8 +2591,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
+            "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
+              "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
+=======
             "D:\\QuizApp\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
               "projectPath": "D:\\QuizApp\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
+>>>>>>> origin/TopicsAndSubTopics
             }
           }
         }

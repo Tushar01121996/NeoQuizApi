@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "43FQPF7kHUjBr2+S0umRvJc/rKNLXCxNcJa34/upQVdJdlSPb14b8pEiWAXL0c6xEuCjbeK2DAvYiFHkY5jB2A==",
+  "success": true,
+  "projectFilePath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+=======
   "dgSpecHash": "cxft18C4mkbKYpnckmx3V945A00eBGd/r6jSr+9AnUSXWFXFTLkXrm28B82M0J4rxCXZpffSBY+4PXs7O0TAbg==",
   "success": true,
   "projectFilePath": "D:\\QuizApp\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+>>>>>>> origin/TopicsAndSubTopics
   "expectedPackageFiles": [
     "C:\\Users\\91943\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\91943\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

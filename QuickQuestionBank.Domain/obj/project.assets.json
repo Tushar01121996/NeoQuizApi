@@ -2229,11 +2229,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj",
+      "projectName": "QuickQuestionBank.Domain",
+      "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj",
+      "packagesPath": "C:\\Users\\soft\\.nuget\\packages\\",
+      "outputPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Domain\\obj\\",
+=======
       "projectUniqueName": "D:\\QuizApp\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj",
       "projectName": "QuickQuestionBank.Domain",
       "projectPath": "D:\\QuizApp\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj",
       "packagesPath": "C:\\Users\\91943\\.nuget\\packages\\",
       "outputPath": "D:\\QuizApp\\QuickQuestionBank.Domain\\obj\\",
+>>>>>>> origin/TopicsAndSubTopics
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\91943\\AppData\\Roaming\\NuGet\\NuGet.Config",
