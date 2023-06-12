@@ -61,6 +61,8 @@ builder.Services.AddTransient<IAuthRepository, AuthRepository>();
 builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddTransient<ITopicsRepository,TopicsRepository>();
 builder.Services.AddTransient<ISubTopicsRepository, SubTopicsRepository>();
+builder.Services.AddTransient<IShareUserQuizRepository, ShareUserQuizRepository>();
+builder.Services.AddTransient<IUserInfoRepository,UserInfoRepository>();
 #endregion
 
 var key = Encoding.ASCII.GetBytes("8772ED32-E6A0-47A3-86E3-34C7D789F5C0"); // Replace with your actual secret key

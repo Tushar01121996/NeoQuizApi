@@ -8,6 +8,7 @@ namespace QuickQuestionBank.Domain.DTOs
 
         public Guid? TopicId { get; set; }
         public string SubTopicName { get; set; }
+        public string TopicName { get; set; }
 
         public static void MapDtoToEntity(SubTopicsDTO source, SubTopics destination)
         {
@@ -31,6 +32,7 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.Id = source.Id;
             destination.TopicId = source.TopicId;
             destination.SubTopicName = source.SubTopicName;
+            destination.TopicName = source.TopicName;
         }
     }
 }

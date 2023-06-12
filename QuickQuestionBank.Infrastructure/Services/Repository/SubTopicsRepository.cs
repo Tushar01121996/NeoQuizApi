@@ -27,7 +27,17 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
 
         public async Task<IReadOnlyList<SubTopics>> GetAllAsync()
         {
-            return await _context.SubTopics.AsNoTracking().ToListAsync();
+            // return await _context.SubTopics.AsNoTracking().ToListAsync();
+            var subTopics =  from s in _context.SubTopics
+                  join r in _context.Topics on s.TopicId equals r.Id
+            select new SubTopics
+            {
+                Id=s.Id,
+                TopicName=r.TopicName,
+                SubTopicName=s.SubTopicName,
+                TopicId=s.TopicId
+            };
+            return await subTopics.AsNoTracking().ToListAsync();           
         }
 
         public async Task<SubTopics> GetByIdAsync(Guid id)
