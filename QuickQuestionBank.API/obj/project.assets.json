@@ -3513,11 +3513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+      "projectUniqueName": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
       "projectName": "QuickQuestionBank.API",
-      "projectPath": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
+      "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
       "packagesPath": "C:\\Users\\soft\\.nuget\\packages\\",
-      "outputPath": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.API\\obj\\",
+      "outputPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3539,14 +3539,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
-              "projectPath": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
+            "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj": {
+              "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Application\\QuickQuestionBank.Application.csproj"
             },
-            "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj": {
-              "projectPath": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj"
+            "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj": {
+              "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Domain\\QuickQuestionBank.Domain.csproj"
             },
-            "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj": {
-              "projectPath": "D:\\Tushar\\NeoQuizApi\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj"
+            "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj": {
+              "projectPath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.Infrastructure\\QuickQuestionBank.Infrastructure.csproj"
             }
           }
         }
