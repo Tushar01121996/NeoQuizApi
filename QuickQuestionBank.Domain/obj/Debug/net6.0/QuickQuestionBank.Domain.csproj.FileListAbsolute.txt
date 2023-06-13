@@ -68,3 +68,17 @@ D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\refint\QuickQuestionBank.Do
 D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.pdb
 D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.genruntimeconfig.cache
 D:\QuizApp\QuickQuestionBank.Domain\obj\Debug\net6.0\ref\QuickQuestionBank.Domain.dll
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.deps.json
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.runtimeconfig.json
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.dll
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\bin\Debug\net6.0\QuickQuestionBank.Domain.pdb
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.csproj.AssemblyReference.cache
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.AssemblyInfoInputs.cache
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.AssemblyInfo.cs
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.csproj.CoreCompileInputs.cache
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.dll
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\refint\QuickQuestionBank.Domain.dll
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.pdb
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\QuickQuestionBank.Domain.genruntimeconfig.cache
+D:\Tushar\NeoQuizApiSwarnimBranch\QuickQuestionBank.Domain\obj\Debug\net6.0\ref\QuickQuestionBank.Domain.dll

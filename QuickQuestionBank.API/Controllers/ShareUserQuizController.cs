@@ -15,10 +15,12 @@ namespace QuickQuestionBank.API.Controllers
     public class ShareUserQuizController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly Application.Interfaces.IRepository.IMailService _mailService;
 
-        public ShareUserQuizController(IMediator mediator)
+        public ShareUserQuizController(IMediator mediator, Application.Interfaces.IRepository.IMailService mailService)
         {
             this._mediator = mediator;
+            this._mailService = mailService;
         }
 
         [HttpGet]
@@ -36,10 +38,13 @@ namespace QuickQuestionBank.API.Controllers
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> Post(ShareUserQuizDTO model)
+        public async Task<ActionResult> Post(List<ShareUserQuizDTO> model)
         {
-            var response = await _mediator.Send(new CreateShareUserQuizCommand { model = model });
-            return Ok(response);
+            for (int i = 0; i < model.Count; i++)
+            {
+                await _mediator.Send(new CreateShareUserQuizCommand { model = model[i] });
+            }
+            return Ok();//return Ok(response);
         }
 
         [HttpDelete("id")]
@@ -55,5 +60,6 @@ namespace QuickQuestionBank.API.Controllers
             }
             return Ok(response);
         }
+
     }
 }

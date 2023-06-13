@@ -27,7 +27,7 @@ namespace QuickQuestionBank.Application.Features.ShareUserQuiz.Handlers
         public async Task<Response<ShareUserQuizDTO>> Handle(CreateShareUserQuizCommand request, CancellationToken cancellationToken)
         {
             QuickQuestionBank.Domain.Entities.ShareUserQuiz result = new();
-            string msg = request.model.Id == null ? "Sub Topics Created Successfully" : "Sub Topics  Updated Successfully";
+            string msg = request.model.Id == null ? "Quiz Shared Created Successfully" : "Quiz Shared Updated Successfully";
             ShareUserQuizDTO.MapDtoToEntity(request.model, result);
             QuickQuestionBank.Domain.Entities.ShareUserQuiz response = await _repository.SaveAsync(result);
             if (response == null)
