@@ -8,9 +8,11 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
     public class ShareUserQuizRepository : IShareUserQuizRepository
     {
         private readonly QuickQuestionDbContext _context;
-        public ShareUserQuizRepository(QuickQuestionDbContext context)
+        private readonly Application.Interfaces.IRepository.IMailService _mailService;
+        public ShareUserQuizRepository(QuickQuestionDbContext context, Application.Interfaces.IRepository.IMailService mailService)
         {
             this._context = context;
+            this._mailService = mailService;
         }
 
         public async Task<Guid> DeleteAsync(Guid id)
@@ -27,7 +29,7 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
 
         public async Task<IReadOnlyList<ShareUserQuiz>> GetAllAsync()
         {
-            return await _context.ShareUserQuiz.AsNoTracking().ToListAsync();           
+            return await _context.ShareUserQuiz.AsNoTracking().ToListAsync();
         }
 
         public async Task<ShareUserQuiz> GetByIdAsync(Guid id)
@@ -37,6 +39,14 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
 
         public async Task<ShareUserQuiz> SaveAsync(ShareUserQuiz entity)
         {
+
+            var email = await _context.UserInfo.Select(x => x.Email).Where(x => entity.UserId == entity.UserId).FirstOrDefaultAsync();
+            MailRequest mailRequest = new MailRequest();
+            mailRequest.Body = entity.Link;
+            mailRequest.Subject = "Neo Quiz";
+            mailRequest.ToEmail = email;
+            await _mailService.SendEmailAsync(mailRequest);
+
             if (entity.Id == default)
             {
                 await _context.AddAsync(entity);
