@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using QuickQuestionBank.Application.Features.QuizQuestion.Queries;
 using QuickQuestionBank.Application.Features.SubTopics.Commands;
 using QuickQuestionBank.Application.Features.SubTopics.Queries;
 using QuickQuestionBank.Application.Features.UserQuiz.Commands;
@@ -27,6 +28,11 @@ namespace QuickQuestionBank.API.Controllers
         [Route("get")]
         public async Task<IActionResult> Get(Guid id) =>
             Ok(await _mediator.Send(new GetSubTopicsQuery { Id = id }));
+
+        [HttpGet]
+        [Route("getByTopicId")]
+        public async Task<IActionResult> GetByTopicId(Guid TopicId) =>
+   Ok(await _mediator.Send(new GetByTopicIdQuery { TopicId = TopicId }));
 
         [HttpGet]
         [Route("get-all")]

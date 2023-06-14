@@ -32,6 +32,24 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         {
             return await _context.QuizQuestions.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);
         }
+
+        public async Task<List<QuizQuestion>> GetByTopicIdAsync(Guid? TopicId,Guid? SubTopicId)
+        {
+            if(TopicId!=null && SubTopicId==null)
+            {
+                return await _context.QuizQuestions.Where(x => x.TopicId == TopicId).ToListAsync();
+            }
+            else if(TopicId != null && SubTopicId != null)
+            {
+                return await _context.QuizQuestions.Where(x => x.TopicId == TopicId).Where(x=>x.SubTopicId==SubTopicId).ToListAsync();
+            }
+            else
+            {
+                return await _context.QuizQuestions.AsNoTracking().ToListAsync();
+            }
+            
+        }
+
         public async Task<QuizQuestion> SaveAsync(QuizQuestion entity)
         {
             if (entity.Id == default)

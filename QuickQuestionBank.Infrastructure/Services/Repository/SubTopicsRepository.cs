@@ -45,6 +45,11 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
             return await _context.SubTopics.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);
         }
 
+        public async Task<SubTopics> GetByTopicIdAsync(Guid TopicId)
+        {
+            return await _context.SubTopics.AsNoTracking().FirstOrDefaultAsync(q => q.TopicId == TopicId);
+        }
+
         public async Task<SubTopics> SaveAsync(SubTopics entity)
         {
             if (entity.Id == default)
