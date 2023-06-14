@@ -15,6 +15,10 @@ namespace QuickQuestionBank.Domain.DTOs
         public string SortOrder { get; set; }
         public string ComplexityLevel { get; set; }
 
+        public Guid TopicId { get; set; }
+
+        public Guid SubTopicId { get; set; }
+
         #region Mappers
         public static void MapDtoToEntity(QuizQuestionDTO source, QuizQuestion destination)
         {
@@ -33,6 +37,8 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.Marks = source.Marks;
             destination.SortOrder = source.SortOrder;
             destination.QuestionTypeId = source.QuestionTypeId;
+            destination.TopicId = source.TopicId;
+            destination.SubTopicId = source.SubTopicId;
         }
         public static void MapEntityToDto(QuizQuestion source, QuizQuestionDTO destination)
         {
@@ -44,6 +50,8 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.Marks = source.Marks;
             destination.SortOrder = source.SortOrder;
             destination.QuestionTypeId = source.QuestionTypeId;
+            destination.TopicId = source.TopicId;
+            destination.SubTopicId = source.SubTopicId;
         }
         #endregion
     }

@@ -14,5 +14,7 @@ namespace QuickQuestionBank.Domain.Entities
         public decimal Marks { get; set; }
         public string SortOrder { get; set; }
         public string ComplexityLevel { get; set; }
+        public Guid TopicId { get; set; }
+        public Guid SubTopicId { get; set; }
     }
 }

@@ -27,6 +27,11 @@ namespace QuickQuestionBank.API.Controllers
             Ok(await _mediator.Send(new GetQuizQuestionQuery { Id = id }));
 
         [HttpGet]
+        [Route("getByTopicId")]
+        public async Task<IActionResult> GetByTopicId(Guid? TopicId, Guid? SubTopicId) =>
+           Ok(await _mediator.Send(new GetByTopicIdQuizQuestionQuery { TopicId = TopicId,SubTopicId=SubTopicId }));
+
+        [HttpGet]
         [Route("get-all")]
         public async Task<IActionResult> GetAll() =>
             Ok(await _mediator.Send(new GetAllQuizQuestionQuery()));
