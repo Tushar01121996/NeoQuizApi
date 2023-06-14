@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickQuestionBank.Application.Features.ShareUserQuiz.Queries
+namespace QuickQuestionBank.Application.Features.UserQuiz.Queries
 {
-    public class GetAllShareUserQuizQuery : IRequest<Response<List<ShareUserQuizDTO>>>
+    public class GetAllUserQuizQuery : IRequest<Response<List<UserQuizDTO>>>
     {
     }
 }

@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickQuestionBank.Application.Features.ShareUserQuiz.Commands
+namespace QuickQuestionBank.Application.Features.UserQuiz.Commands
 {
-    public class CreateShareUserQuizCommand : IRequest<Response<ShareUserQuizDTO>>
+    public class CreateUserQuizCommand : IRequest<Response<UserQuizDTO>>
     {
-        public ShareUserQuizDTO model { get; set; }
+        public UserQuizDTO model { get; set; }
     }
 }
 

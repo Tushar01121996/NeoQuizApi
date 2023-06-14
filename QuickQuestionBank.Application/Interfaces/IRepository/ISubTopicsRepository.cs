@@ -12,7 +12,7 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
         Task<Guid> DeleteAsync(Guid id);
         Task<IReadOnlyList<SubTopics>> GetAllAsync();
         Task<SubTopics> GetByIdAsync(Guid TopicId);
-        Task<SubTopics> GetByTopicIdAsync(Guid Topicid);
+        Task<List<SubTopics>> GetByTopicIdAsync(Guid Topicid);
         Task<SubTopics> SaveAsync(SubTopics entity);
     }
 }

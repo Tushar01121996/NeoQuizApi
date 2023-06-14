@@ -5,11 +5,11 @@ using QuickQuestionBank.Domain.Entities;
 
 namespace QuickQuestionBank.Infrastructure.Services.Repository
 {
-    public class ShareUserQuizRepository : IShareUserQuizRepository
+    public class UserQuizRepository : IUserQuizRepository
     {
         private readonly QuickQuestionDbContext _context;
         private readonly Application.Interfaces.IRepository.IMailService _mailService;
-        public ShareUserQuizRepository(QuickQuestionDbContext context, Application.Interfaces.IRepository.IMailService mailService)
+        public UserQuizRepository(QuickQuestionDbContext context, Application.Interfaces.IRepository.IMailService mailService)
         {
             this._context = context;
             this._mailService = mailService;
@@ -17,27 +17,27 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
 
         public async Task<Guid> DeleteAsync(Guid id)
         {
-            ShareUserQuiz result = await _context.ShareUserQuiz.FirstOrDefaultAsync(x => x.Id == id);
+            UserQuiz result = await _context.UserQuiz.FirstOrDefaultAsync(x => x.Id == id);
             if (result == null)
             {
                 return default;
             }
-            _context.ShareUserQuiz.Remove(result);
+            _context.UserQuiz.Remove(result);
             await _context.SaveChangesAsync();
             return id;
         }
 
-        public async Task<IReadOnlyList<ShareUserQuiz>> GetAllAsync()
+        public async Task<IReadOnlyList<UserQuiz>> GetAllAsync()
         {
-            return await _context.ShareUserQuiz.AsNoTracking().ToListAsync();
+            return await _context.UserQuiz.AsNoTracking().ToListAsync();
         }
 
-        public async Task<ShareUserQuiz> GetByIdAsync(Guid id)
+        public async Task<UserQuiz> GetByIdAsync(Guid id)
         {
-            return await _context.ShareUserQuiz.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);
+            return await _context.UserQuiz.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);
         }
 
-        public async Task<ShareUserQuiz> SaveAsync(ShareUserQuiz entity)
+        public async Task<UserQuiz> SaveAsync(UserQuiz entity)
         {
 
             var email = await _context.UserInfo.Select(x => x.Email).Where(x => entity.UserId == entity.UserId).FirstOrDefaultAsync();

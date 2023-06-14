@@ -10,9 +10,13 @@ namespace QuickQuestionBank.Domain.DTOs
     public class UserInfoDTO
     {
         public Guid? Id { get; set; }
-        public string UserName { get; set; }
+        // public string UserName { get; set; }
 
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
+
+        public Guid? QuizId { get; set; }
         public static void MapDtoToEntity(UserInfoDTO source, UserInfo destination)
         {
             if (source.Id == null)
@@ -24,8 +28,10 @@ namespace QuickQuestionBank.Domain.DTOs
                 destination.ModifiedDate = DateTime.Now;
                 destination.Id = (Guid)source.Id;
             }
-            destination.UserName = source.UserName;
+            destination.FirstName = source.FirstName;
+            destination.LastName = source.LastName;
             destination.Email = source.Email;
+            destination.QuizId = source.QuizId;
             destination.IsDeleted = false;
         }
 
@@ -33,8 +39,10 @@ namespace QuickQuestionBank.Domain.DTOs
         {
             //Map using automapper or custom mapper
             destination.Id = source.Id;
-            destination.UserName = source.UserName;
+            destination.FirstName = source.FirstName;
+            destination.LastName = source.LastName;
             destination.Email = source.Email;
+            destination.QuizId=source.QuizId;
         }
     }
 }

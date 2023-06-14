@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace QuickQuestionBank.Application.Interfaces.IRepository
 {
-    public interface IShareUserQuizRepository
+    public interface IUserQuizRepository
     {
         Task<Guid> DeleteAsync(Guid id);
-        Task<IReadOnlyList<ShareUserQuiz>> GetAllAsync();
-        Task<ShareUserQuiz> GetByIdAsync(Guid id);
-        Task<ShareUserQuiz> SaveAsync(ShareUserQuiz entity);
+        Task<IReadOnlyList<UserQuiz>> GetAllAsync();
+        Task<UserQuiz> GetByIdAsync(Guid id);
+        Task<UserQuiz> SaveAsync(UserQuiz entity);
     }
 }
