@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickQuestionBank.Application.Features.SubTopics.Queries
+namespace QuickQuestionBank.Application.Features.UserInfo.Queries
 {
-    public class GetByTopicIdQuery : IRequest<Response<List<SubTopicsDTO>>>
+    public class GetUnAssignedUserInfoQuery : IRequest<Response<List<UserInfoDTO>>>
     {
-        public Guid TopicId { get; set; }
+        public Guid? Id { get; set; }
+
+        public Guid? QuizId { get; set; }
     }
 }

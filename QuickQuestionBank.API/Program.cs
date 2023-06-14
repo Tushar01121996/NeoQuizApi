@@ -61,7 +61,7 @@ builder.Services.AddTransient<IAuthRepository, AuthRepository>();
 builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddTransient<ITopicsRepository,TopicsRepository>();
 builder.Services.AddTransient<ISubTopicsRepository, SubTopicsRepository>();
-builder.Services.AddTransient<IShareUserQuizRepository, ShareUserQuizRepository>();
+builder.Services.AddTransient<IUserQuizRepository, UserQuizRepository>();
 builder.Services.AddTransient<IUserInfoRepository,UserInfoRepository>();
 #endregion
 

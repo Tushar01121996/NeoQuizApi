@@ -29,7 +29,7 @@ namespace QuickQuestionBank.Domain.DTOs
         public static void MapEntityToDto(SubTopics source, SubTopicsDTO destination)
         {
             //Map using automapper or custom mapper
-            destination.Id = source.Id;
+           destination.Id = source.Id;
             destination.TopicId = source.TopicId;
             destination.SubTopicName = source.SubTopicName;
             destination.TopicName = source.TopicName;

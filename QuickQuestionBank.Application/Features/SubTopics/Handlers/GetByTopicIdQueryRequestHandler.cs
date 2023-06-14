@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace QuickQuestionBank.Application.Features.SubTopics.Handlers
 {
-    public class GetByTopicIdQueryRequestHandler : IRequestHandler<GetByTopicIdQuery, Response<SubTopicsDTO>>
+    public class GetByTopicIdQueryRequestHandler : IRequestHandler<GetByTopicIdQuery, Response<List<SubTopicsDTO>>>
     {
         private readonly ISubTopicsRepository _repository;
         private readonly IMapper _mapper;
@@ -22,19 +22,27 @@ namespace QuickQuestionBank.Application.Features.SubTopics.Handlers
             this._repository = repository;
             this._mapper = mapper;
         }
-        public async Task<Response<SubTopicsDTO>> Handle(GetByTopicIdQuery request, CancellationToken cancellationToken)
+        public async Task<Response<List<SubTopicsDTO>>> Handle(GetByTopicIdQuery request, CancellationToken cancellationToken)
         {
             //Fetch date from database
-            QuickQuestionBank.Domain.Entities.SubTopics result = await _repository.GetByTopicIdAsync(request.TopicId);
+            //Fetch
+            List<QuickQuestionBank.Domain.Entities.SubTopics> result = await _repository.GetByTopicIdAsync(request.TopicId);
 
-            //Map using automapper or custom mapper
-            SubTopicsDTO topicdto = new();
-            SubTopicsDTO.MapEntityToDto(result, topicdto);
-            return new Response<SubTopicsDTO>()
+            List<SubTopicsDTO> list = new();
+            //Map
+            foreach (var quiz in result)
             {
-                Data = topicdto,
-                Message = "Sub Topics found successfully!",
-                Count = 1,
+                SubTopicsDTO topicDTO = new();
+                SubTopicsDTO.MapEntityToDto(quiz, topicDTO);
+                list.Add(topicDTO);
+            }
+
+            //Return
+            return new Response<List<SubTopicsDTO>>
+            {
+                Data = list,
+                Message = "Topics found!",
+                Count = list.Count
             };
         }
     }

@@ -13,5 +13,6 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
         Task<IReadOnlyList<UserInfo>> GetAllAsync();
         Task<UserInfo> GetByIdAsync(Guid id);
         Task<UserInfo> SaveAsync(UserInfo entity);
+        Task<List<UserInfo>> GetUnAssignedByIdAsync(Guid? id, Guid? QuizId);
     }
 }

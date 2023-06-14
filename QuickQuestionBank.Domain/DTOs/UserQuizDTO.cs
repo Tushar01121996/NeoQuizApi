@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuickQuestionBank.Domain.DTOs
 {
-    public class ShareUserQuizDTO
+    public class UserQuizDTO
     {
         public Guid? Id { get; set; }
         public Guid? UserId { get; set; }
@@ -16,7 +16,7 @@ namespace QuickQuestionBank.Domain.DTOs
 
         public string Link { get; set; }
 
-        public static void MapDtoToEntity(ShareUserQuizDTO source, ShareUserQuiz destination)
+        public static void MapDtoToEntity(UserQuizDTO source, UserQuiz destination)
         {
             if (source.Id == null)
             {
@@ -29,17 +29,17 @@ namespace QuickQuestionBank.Domain.DTOs
             }
             destination.UserId = source.UserId;
             destination.QuizId = source.QuizId;
-            destination.Link = source.Link;
+           destination.Link = source.Link;
             destination.IsDeleted = false;
         }
 
-        public static void MapEntityToDto(ShareUserQuiz source, ShareUserQuizDTO destination)
+        public static void MapEntityToDto(UserQuiz source, UserQuizDTO destination)
         {
             //Map using automapper or custom mapper
             destination.Id = source.Id;
             destination.UserId = source.UserId;
             destination.QuizId = source.QuizId;
-            destination.Link = source.Link;
+           destination.Link = source.Link;
         }
 
 

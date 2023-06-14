@@ -11,7 +11,7 @@ namespace QuickQuestionBank.Domain {
         public QuickQuestionDbContext(DbContextOptions<QuickQuestionDbContext> dbOptions) 
             : base(dbOptions) { }
 
-        public DbSet<ShareUserQuiz> ShareUserQuiz { get; set; }
+        public DbSet<UserQuiz> UserQuiz { get; set; }
         public DbSet<UserInfo> UserInfo { get; set; }
         public DbSet<Topics> Topics { get; set; }
         public DbSet<SubTopics> SubTopics { get; set; }
