@@ -30,20 +30,10 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
             return await _context.UserInfo.AsNoTracking().ToListAsync();      
         }
 
-        public async Task<List<UserInfo>> GetUnAssignedByIdAsync(Guid? id, Guid? QuizId)
+        public async Task<List<UserInfo>> GetUnAssignedByIdAsync(Guid? QuizId)
         {
-
-            // var a = _context.UserQuiz.ToListAsync();
-
-            var result = await _context.UserQuiz.Where(x => x.UserId == id).Where(x => x.QuizId == QuizId).FirstOrDefaultAsync();
-
-            if (result != null) { 
-                return await _context.UserInfo.Where(x => x.Id != result.UserId).ToListAsync(); 
-            }
-            else
-            {
-                return await _context.UserInfo.ToListAsync();
-            }
+          var result=  await _context.UserQuiz.Where(x => x.QuizId == QuizId).Select(x => x.UserId).ToListAsync();
+          return await _context.UserInfo.Where(x => !result.Contains(x.Id)).ToListAsync();
         }
 
         public async Task<UserInfo> GetByIdAsync(Guid id)
