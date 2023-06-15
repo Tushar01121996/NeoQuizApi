@@ -28,7 +28,7 @@ namespace QuickQuestionBank.Application.Features.UserInfo.Handlers
         public async Task<Response<List<UserInfoDTO>>> Handle(GetUnAssignedUserInfoQuery request, CancellationToken cancellationToken)
         {
             
-            List<QuickQuestionBank.Domain.Entities.UserInfo> result = await _repository.GetUnAssignedByIdAsync(request.Id,request.QuizId);
+            List<QuickQuestionBank.Domain.Entities.UserInfo> result = await _repository.GetUnAssignedByIdAsync(request.QuizId);
             List<UserInfoDTO> list = new();
             //Map
             foreach (var quiz in result)

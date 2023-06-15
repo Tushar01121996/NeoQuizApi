@@ -29,8 +29,8 @@ namespace QuickQuestionBank.API.Controllers
 
         [HttpGet]
         [Route("getUnAssignedUser")]
-        public async Task<IActionResult> GetUnAssignedById(Guid? id,Guid? QuizId) =>
-       Ok(await _mediator.Send(new GetUnAssignedUserInfoQuery { Id = id,QuizId=QuizId }));
+        public async Task<IActionResult> GetUnAssignedById(Guid? QuizId) =>
+       Ok(await _mediator.Send(new GetUnAssignedUserInfoQuery {QuizId=QuizId }));
 
         [HttpGet]
         [Route("get-all")]

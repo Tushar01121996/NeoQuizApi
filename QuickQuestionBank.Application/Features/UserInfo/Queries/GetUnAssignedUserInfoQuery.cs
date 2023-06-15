@@ -11,8 +11,6 @@ namespace QuickQuestionBank.Application.Features.UserInfo.Queries
 {
     public class GetUnAssignedUserInfoQuery : IRequest<Response<List<UserInfoDTO>>>
     {
-        public Guid? Id { get; set; }
-
         public Guid? QuizId { get; set; }
     }
 }
