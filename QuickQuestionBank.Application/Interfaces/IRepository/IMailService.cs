@@ -9,6 +9,6 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
 {
     public interface IMailService
     {
-        Task SendEmailAsync(MailRequest mailRequest);
+        Task SendEmailAsync(MailRequest mailRequest, string firstName, string lastName, string quizName, DateTime expiryDate);
     }
 }

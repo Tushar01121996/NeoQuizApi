@@ -21,7 +21,7 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         {
             _mailSettings = mailSettings.Value;
         }
-        public async Task SendEmailAsync(MailRequest mailRequest)
+        public async Task SendEmailAsync(MailRequest mailRequest, string firstName, string lastName, string quizName, DateTime expiryDate)
         {
             try
             {
@@ -29,6 +29,10 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
                 string filepath = directory + "/EmailTemplate/Email.html";
                 string htmlContent = File.ReadAllText(filepath);
                 htmlContent=htmlContent.Replace("[Link]", mailRequest.Body.ToString());
+                htmlContent = htmlContent.Replace("[FirstName]", firstName);
+                htmlContent = htmlContent.Replace("[LastName]", lastName);
+                htmlContent = htmlContent.Replace("[QuizName]", quizName);
+                htmlContent = htmlContent.Replace("[ExpiryDate]", expiryDate.ToShortDateString());
                 var email = new MimeMessage();
                 email.Sender = MailboxAddress.Parse(_mailSettings.Mail);
                 email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));

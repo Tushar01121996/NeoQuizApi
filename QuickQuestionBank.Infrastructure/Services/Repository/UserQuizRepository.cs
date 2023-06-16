@@ -40,12 +40,13 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         public async Task<UserQuiz> SaveAsync(UserQuiz entity)
         {
 
-            var email = await _context.UserInfo.Select(x => x.Email).Where(x => entity.UserId == entity.UserId).FirstOrDefaultAsync();
+            var email = await _context.UserInfo.Select(x => new { x.Email , x.FirstName, x.LastName, }).Where(x => entity.UserId == entity.UserId).FirstOrDefaultAsync();
+            var quizDetails = await _context.Quiz.Where(x => x.Id == entity.QuizId).FirstOrDefaultAsync();
             MailRequest mailRequest = new MailRequest();
             mailRequest.Body = entity.Link;
             mailRequest.Subject = "Neo Quiz";
-            mailRequest.ToEmail = email;
-            await _mailService.SendEmailAsync(mailRequest);
+            mailRequest.ToEmail = email.Email;
+            await _mailService.SendEmailAsync(mailRequest, email.FirstName, email.LastName , quizDetails.QuizTitle, quizDetails.QuizExpiryDate);
 
             if (entity.Id == default)
             {

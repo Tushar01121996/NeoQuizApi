@@ -51,7 +51,7 @@ namespace QuickQuestionBank.API.Controllers
                 var response = await _mediator.Send(new CreateShareQuizCommand { model = model[i] });
                 if(response!=null)
                 {
-                    await _mailService.SendEmailAsync(mailRequest);
+                  //  await _mailService.SendEmailAsync(mailRequest);
                 }
             }
             return Ok();
