@@ -63,6 +63,7 @@ builder.Services.AddTransient<ITopicsRepository,TopicsRepository>();
 builder.Services.AddTransient<ISubTopicsRepository, SubTopicsRepository>();
 builder.Services.AddTransient<IUserQuizRepository, UserQuizRepository>();
 builder.Services.AddTransient<IUserInfoRepository,UserInfoRepository>();
+builder.Services.AddTransient<IUserQuizAttemptRepository, UserQuizAttemptRepository>();
 #endregion
 
 var key = Encoding.ASCII.GetBytes("8772ED32-E6A0-47A3-86E3-34C7D789F5C0"); // Replace with your actual secret key

@@ -22,6 +22,7 @@ namespace QuickQuestionBank.Domain {
         public DbSet<QuizQuestionMapping> QuizQuestionMapping { get; set; }
         public DbSet<ShareQuiz> ShareQuizes { get; set; }
         public DbSet<LoginUser> Login { get; set; }
+        public DbSet<UserQuizAttempt> UserQuizAttempt { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             foreach (var type in modelBuilder.Model.GetEntityTypes()) {

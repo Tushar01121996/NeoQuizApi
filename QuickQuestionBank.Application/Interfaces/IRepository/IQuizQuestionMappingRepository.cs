@@ -7,7 +7,7 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
        // Task<Guid> DeleteAsync(Quiz entity);
 
         Task<Guid> DeleteAsync(Guid id);
-        Task<IReadOnlyList<QuizQuestionMapping>> GetByQuizIdAsync(Guid id);
+        Task<IReadOnlyList<QuestionOptionViewModel>> GetByQuizIdAsync(Guid id);
         Task<QuizQuestionMapping> SaveAsync(QuizQuestionMapping entity);
     }
 }

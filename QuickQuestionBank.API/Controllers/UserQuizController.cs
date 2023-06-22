@@ -47,6 +47,17 @@ namespace QuickQuestionBank.API.Controllers
             return Ok();//return Ok(response);
         }
 
+        [HttpPost]
+        [Route("UserQuizsave")]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> UserQuizPost(UserQuizAttemptDTO model)
+        {
+            await _mediator.Send(new CreateUserQuizAttemptCommand { model = model });
+            return Ok();
+        }
+
         [HttpDelete("id")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

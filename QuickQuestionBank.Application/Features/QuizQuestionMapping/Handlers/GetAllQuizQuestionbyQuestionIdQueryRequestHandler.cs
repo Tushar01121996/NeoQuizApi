@@ -11,7 +11,7 @@ using QuickQuestionBank.Domain.Entities;
 
 namespace QuickQuestionBank.Application.Features.QuestionAnswerMapping.Handlers {
 
-    public class GetAllQuizQuestionbyQuestionIdQueryRequestHandler : IRequestHandler<GetQuizQuestionByQuestionIdQuery, Response<List<QuizQuestionMappingDTO>>> {
+    public class GetAllQuizQuestionbyQuestionIdQueryRequestHandler : IRequestHandler<GetQuizQuestionByQuestionIdQuery, Response<List<QuestionOptionViewModelDTO>>> {
         private readonly IQuizQuestionMappingRepository _repository;
         private readonly IMapper _mapper;
 
@@ -23,20 +23,20 @@ namespace QuickQuestionBank.Application.Features.QuestionAnswerMapping.Handlers 
 
         public IMapper Mapper { get; }
 
-        public async Task<Response<List<QuizQuestionMappingDTO>>> Handle(GetQuizQuestionByQuestionIdQuery request, CancellationToken cancellationToken) {
+        public async Task<Response<List<QuestionOptionViewModelDTO>>> Handle(GetQuizQuestionByQuestionIdQuery request, CancellationToken cancellationToken) {
             //Fetch
-            IReadOnlyList<QuickQuestionBank.Domain.Entities.QuizQuestionMapping> result = await _repository.GetByQuizIdAsync(request.Id);
-            List<QuizQuestionMappingDTO> list = new();
+            IReadOnlyList<QuickQuestionBank.Domain.Entities.QuestionOptionViewModel> result = await _repository.GetByQuizIdAsync(request.Id);
+            List<QuestionOptionViewModelDTO> list = new();
             //Map
             foreach (var quiz in result)
             {
-                QuizQuestionMappingDTO quizDTO = new();
-                QuizQuestionMappingDTO.MapEntityToDto(quiz, quizDTO);
+                QuestionOptionViewModelDTO quizDTO = new();
+                QuestionOptionViewModelDTO.MapEntityToDto(quiz, quizDTO);
                 list.Add(quizDTO);
             }
 
             //Return
-            return new Response<List<QuizQuestionMappingDTO>> {
+            return new Response<List<QuestionOptionViewModelDTO>> {
                 Data = list,
                 Message = "Quiz Question Mapping found!",
                 Count = list.Count
