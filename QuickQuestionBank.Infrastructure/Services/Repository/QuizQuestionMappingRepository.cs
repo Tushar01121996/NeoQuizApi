@@ -53,19 +53,21 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
                             QuestionId = s.QuestionId,
                             QuestionText = r.QuestionText,
                             SortOrder = r.SortOrder,
-                            QuestionTypeId = r.QuestionTypeId.ToString(),
+                            QuestionTypeId = r.QuestionTypeId,
                             OptionId = o.Id,
                             OptionText = o.OptionText,
                             OptionSortOrder = o.SortOrder,
                             IsCorrectAnswer = o.IsCorrectAnswer
                         };
-            var result = value.GroupBy(x => new { x.QuestionId, x.QuestionText })
+            var result = value.GroupBy(x => new { x.QuestionId, x.QuestionText, x.QuestionTypeId })
                 .Select(b => new QuestionOptionViewModel
                 {
                     Options = b.Select(x=>new QuestionAnswerMapping { OptionText = x.OptionText, Id = x.OptionId, SortOrder = x.OptionSortOrder, IsCorrectAnswer=x.IsCorrectAnswer}).ToList(),
                     // Accessing to DateOfIssue and IssuerName from Key.
                     QuestionId = b.Key.QuestionId,
-                    QuestionText = b.Key.QuestionText
+                    QuestionText = b.Key.QuestionText,
+                    QuestionTypeId = b.Key.QuestionTypeId
+                    
                 });
             return await result.ToListAsync();
         }

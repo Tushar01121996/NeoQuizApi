@@ -11,7 +11,7 @@ namespace QuickQuestionBank.Domain.DTOs
 
         public string QuestionText { get; set; }
         public string SortOrder { get; set; }
-        public string QuestionTypeId { get; set; }
+        public Guid QuestionTypeId { get; set; }
         public Guid OptionId { get; set; }
         public string OptionText { get; set; }
         public string IsCorrectAnswer { get; set; }

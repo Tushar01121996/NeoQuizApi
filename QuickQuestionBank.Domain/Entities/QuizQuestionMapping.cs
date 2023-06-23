@@ -11,7 +11,7 @@ namespace QuickQuestionBank.Domain.Entities {
         [NotMapped]
         public string SortOrder { get; set; }
         [NotMapped]
-        public string QuestionTypeId { get; set; }
+        public Guid QuestionTypeId { get; set; }
         [NotMapped]
         public Guid OptionId { get; set; }
         [NotMapped]

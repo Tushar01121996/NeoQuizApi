@@ -8,6 +8,7 @@ namespace QuickQuestionBank.Domain.DTOs
         public Guid QuizId { get; set; }
         public Guid QuestionId { get; set; }
         public string QuestionText { get; set; }
+        public Guid QuestionTypeId { get; set; }
         public string SortOrder { get; set; }
         public List<QuestionAnswerMapping> Options { get; set; }
 
@@ -20,6 +21,7 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.QuizId = source.QuizId;
             destination.QuestionId = source.QuestionId;
             destination.QuestionText = source.QuestionText;
+            destination.QuestionTypeId = source.QuestionTypeId;
             destination.SortOrder = source.SortOrder;
             destination.Options = source.Options;
         }
@@ -30,6 +32,7 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.QuizId = source.QuizId;
             destination.QuestionId = source.QuestionId;
             destination.QuestionText = source.QuestionText;
+            destination.QuestionTypeId = source.QuestionTypeId;
             destination.SortOrder = source.SortOrder;
             destination.Options = source.Options;
         }

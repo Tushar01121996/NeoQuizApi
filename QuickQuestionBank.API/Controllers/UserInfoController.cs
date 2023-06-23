@@ -12,7 +12,7 @@ namespace QuickQuestionBank.API.Controllers
     [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UserInfoController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -28,16 +28,19 @@ namespace QuickQuestionBank.API.Controllers
             Ok(await _mediator.Send(new GetUserInfoQuery { Id = id }));
 
         [HttpGet]
+        [Authorize]
         [Route("getUnAssignedUser")]
         public async Task<IActionResult> GetUnAssignedById(Guid? QuizId) =>
        Ok(await _mediator.Send(new GetUnAssignedUserInfoQuery {QuizId=QuizId }));
 
         [HttpGet]
+        [Authorize]
         [Route("get-all")]
         public async Task<IActionResult> GetAll() =>
             Ok(await _mediator.Send(new GetAllUserInfoQuery()));
 
         [HttpPost]
+        [Authorize]
         [Route("save")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -49,6 +52,7 @@ namespace QuickQuestionBank.API.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]

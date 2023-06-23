@@ -12,7 +12,7 @@ namespace QuickQuestionBank.API.Controllers
     [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class QuizQuestionMappingController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -29,6 +29,7 @@ namespace QuickQuestionBank.API.Controllers
            Ok(await _mediator.Send(new GetQuizQuestionByQuestionIdQuery { Id = id }));
 
         [HttpPost]
+        [Authorize]
         [Route("save")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -40,6 +41,7 @@ namespace QuickQuestionBank.API.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
