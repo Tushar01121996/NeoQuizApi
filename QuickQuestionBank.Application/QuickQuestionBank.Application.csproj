@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Login\Queries\" />
+    <Folder Include="Features\Report\Queries\" />
   </ItemGroup>
 
 </Project>

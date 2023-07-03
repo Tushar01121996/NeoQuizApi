@@ -15,22 +15,28 @@ namespace QuickQuestionBank.Domain.DTOs
         public Guid? QuizId { get; set; }
 
         public string Link { get; set; }
+        public bool isAttempted { get; set; }
+        public string TimeDuration { get; set; }
 
         public static void MapDtoToEntity(UserQuizDTO source, UserQuiz destination)
         {
             if (source.Id == null)
             {
                 destination.CreatedDate = DateTime.Now;
+                //destination.isAttempted = false;
             }
             else
             {
                 destination.ModifiedDate = DateTime.Now;
                 destination.Id = (Guid)source.Id;
+                destination.isAttempted = true;
             }
             destination.UserId = source.UserId;
             destination.QuizId = source.QuizId;
-           destination.Link = source.Link;
+            destination.Link = source.Link;
             destination.IsDeleted = false;
+            destination.TimeDuration = source.TimeDuration;
+            
         }
 
         public static void MapEntityToDto(UserQuiz source, UserQuizDTO destination)
@@ -39,7 +45,9 @@ namespace QuickQuestionBank.Domain.DTOs
             destination.Id = source.Id;
             destination.UserId = source.UserId;
             destination.QuizId = source.QuizId;
-           destination.Link = source.Link;
+            destination.Link = source.Link;
+            destination.isAttempted = source.isAttempted;
+            destination.TimeDuration = source.TimeDuration;
         }
 
 

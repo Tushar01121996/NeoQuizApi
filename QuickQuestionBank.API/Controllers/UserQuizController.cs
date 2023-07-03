@@ -11,7 +11,7 @@ namespace QuickQuestionBank.API.Controllers
     [EnableCors("AllowOrigin")]
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class UserQuizController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -30,13 +30,18 @@ namespace QuickQuestionBank.API.Controllers
             Ok(await _mediator.Send(new GetUserQuizQuery { Id = id }));
 
         [HttpGet]
+        [Route("getbyUserIdandQuizId")]
+        public async Task<IActionResult> GetbyUserIdandQuizId(Guid userId, Guid quizId) =>
+            Ok(await _mediator.Send(new GetUserQuizbyUserIdQuizIdQuery { userId = userId, quizId = quizId }));
+
+        [HttpGet]
         [Authorize]
         [Route("get-all")]
         public async Task<IActionResult> GetAll() =>
             Ok(await _mediator.Send(new GetAllUserQuizQuery()));
 
         [HttpPost]
-        [Authorize]
+
         [Route("save")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -55,9 +60,9 @@ namespace QuickQuestionBank.API.Controllers
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> UserQuizPost(UserQuizAttemptDTO model)
+        public async Task<ActionResult> UserQuizPost(UserQuizAttemptDTO model, string totalTime)
         {
-            await _mediator.Send(new CreateUserQuizAttemptCommand { model = model });
+            await _mediator.Send(new CreateUserQuizAttemptCommand { model = model, totalTime = totalTime });
             return Ok();
         }
 
@@ -75,6 +80,19 @@ namespace QuickQuestionBank.API.Controllers
             }
             return Ok(response);
         }
+        //[HttpPut("updateUserQuizAttempt")]
+        //[ProducesResponseType(StatusCodes.Status204NoContent)]
+        //[ProducesResponseType(StatusCodes.Status404NotFound)]
+        //[ProducesDefaultResponseType]
+        //public async Task<ActionResult> updateUserQuizAttempt(Guid userId, Guid quizId)
+        //{
+        //    //var response = await _mediator.Send(new DeleteUserQuizQuery { Id = id });
+        //    //if (response.Count == 0)
+        //    //{
+        //    //    return NotFound();
+        //    //}
+        //    return Ok(response);
+        //}
 
     }
 }

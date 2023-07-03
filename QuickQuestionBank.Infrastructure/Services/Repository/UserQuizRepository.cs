@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper.Internal.Mappers;
+using Microsoft.EntityFrameworkCore;
 using QuickQuestionBank.Application.Interfaces.IRepository;
 using QuickQuestionBank.Domain;
 using QuickQuestionBank.Domain.Entities;
@@ -31,7 +32,11 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
         {
             return await _context.UserQuiz.AsNoTracking().ToListAsync();
         }
-
+        
+        public async Task<UserQuiz> GetbyUserIdandQuizId(Guid userId, Guid quizId)
+        {
+            return await _context.UserQuiz.AsNoTracking().Where(x => x.UserId == userId && x.QuizId == quizId).FirstOrDefaultAsync();
+        }
         public async Task<UserQuiz> GetByIdAsync(Guid id)
         {
             return await _context.UserQuiz.AsNoTracking().FirstOrDefaultAsync(q => q.Id == id);
@@ -39,25 +44,36 @@ namespace QuickQuestionBank.Infrastructure.Services.Repository
 
         public async Task<UserQuiz> SaveAsync(UserQuiz entity)
         {
-
-            var email = await _context.UserInfo.Where(x => x.Id == entity.UserId).FirstOrDefaultAsync();
-            var quizDetails = await _context.Quiz.Where(x => x.Id == entity.QuizId).FirstOrDefaultAsync();
-            MailRequest mailRequest = new MailRequest();
-            mailRequest.Body = entity.Link;
-            mailRequest.Subject = "Neo Quiz";
-            mailRequest.ToEmail = email.Email;
-            await _mailService.SendEmailAsync(mailRequest, email.FirstName, email.LastName , quizDetails.QuizTitle, quizDetails.QuizExpiryDate);
-
-            if (entity.Id == default)
+            var data = await _context.UserQuiz.Where(x => x.UserId == entity.UserId && x.QuizId == entity.QuizId).FirstOrDefaultAsync();
+            if (data != null)
             {
-                await _context.AddAsync(entity);
+                data.isAttempted = true;
+                _context.Entry(data).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return entity;
             }
             else
             {
-                _context.Entry(entity).State = EntityState.Modified;
+                var email = await _context.UserInfo.Where(x => x.Id == entity.UserId).FirstOrDefaultAsync();
+                var quizDetails = await _context.Quiz.Where(x => x.Id == entity.QuizId).FirstOrDefaultAsync();
+                MailRequest mailRequest = new MailRequest();
+                mailRequest.Body = entity.Link;
+                mailRequest.Subject = "Neo Quiz";
+                mailRequest.ToEmail = email.Email;
+                await _mailService.SendEmailAsync(mailRequest, email.FirstName, email.LastName, quizDetails.QuizTitle, quizDetails.QuizExpiryDate);
+
+                if (entity.Id == default)
+                {
+                    await _context.AddAsync(entity);
+                }
+                else
+                {
+                    _context.Entry(entity).State = EntityState.Modified;
+                }
+                await _context.SaveChangesAsync();
+                return entity;
             }
-            await _context.SaveChangesAsync();
-            return entity;
+
         }
     }
 }

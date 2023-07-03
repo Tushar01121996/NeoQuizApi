@@ -24,7 +24,7 @@ namespace QuickQuestionBank.Application.Features.UserQuiz.Handlers
             UserQuizAttempt result = new();
             string msg = request.model.Id == null ? "User Quiz Attempt Created Successfully" : "User Quiz Attempt Updated Successfully";
             UserQuizAttemptDTO.MapDtoToEntity(request.model,result);
-            UserQuizAttempt response = await _repository.SaveAsync(result);
+            UserQuizAttempt response = await _repository.SaveAsync(result, request.totalTime);
             if(response == null)
             {
                 return new Response<UserQuizAttemptDTO>()

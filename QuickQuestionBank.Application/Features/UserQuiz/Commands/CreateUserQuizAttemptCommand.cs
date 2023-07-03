@@ -11,7 +11,8 @@ namespace QuickQuestionBank.Application.Features.UserQuiz.Commands
 {
     public class CreateUserQuizAttemptCommand : IRequest<Response<UserQuizAttemptDTO>>
     {
-    public UserQuizAttemptDTO model { get; set; }  
-    //public Guid id { get; set; }  
+        public UserQuizAttemptDTO model { get; set; }
+        public string totalTime { get; set; }
+        //public Guid id { get; set; }  
     }
 }

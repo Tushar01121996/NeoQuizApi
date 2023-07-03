@@ -13,6 +13,8 @@ namespace QuickQuestionBank.Domain.Entities
         public Guid? UserId { get; set; }
 
         public Guid? QuizId { get; set; }
+        public bool isAttempted { get; set; }
+        public string TimeDuration { get; set; }
 
         [NotMapped]
         public string Link { get; set; }

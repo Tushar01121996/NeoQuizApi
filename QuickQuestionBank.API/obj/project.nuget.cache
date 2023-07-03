@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "43FQPF7kHUjBr2+S0umRvJc/rKNLXCxNcJa34/upQVdJdlSPb14b8pEiWAXL0c6xEuCjbeK2DAvYiFHkY5jB2A==",
+  "dgSpecHash": "WoXEcALzOfh99ByI7Hb5c67VTmGjeVC7Ug3SznkBf9FKuYcQGp4GdwiZ+5bEK1gebYmxTVQjwmYD/lNWRIa+2g==",
   "success": true,
   "projectFilePath": "D:\\Tushar\\NeoQuizApiSwarnimBranch\\QuickQuestionBank.API\\QuickQuestionBank.API.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\soft\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\soft\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\soft\\.nuget\\packages\\mimekit\\4.0.0\\mimekit.4.0.0.nupkg.sha512",
+    "C:\\Users\\soft\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\soft\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\soft\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\soft\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

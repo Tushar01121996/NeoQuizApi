@@ -4,7 +4,7 @@ namespace QuickQuestionBank.Application.Interfaces.IRepository
 {
     public interface IUserQuizAttemptRepository
     {
-        Task<UserQuizAttempt> SaveAsync(UserQuizAttempt entity);
+        Task<UserQuizAttempt> SaveAsync(UserQuizAttempt entity, string totalTime);
         
     }
 }
